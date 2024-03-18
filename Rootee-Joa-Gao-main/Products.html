@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rootee Jao Gao</title>
+    <link rel="stylesheet" href="Style.css" />
+    <!-- Link your CSS file -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+    />
+    <link rel="stylesheet" href="Style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.3/jspdf.umd.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <img src="Rootee-Logo.jpg" alt="rootee-logo" />
+      <h1>Rootee Jao Gao</h1>
+      <nav>
+        <ul>
+          <li><a href="#products">Rootees</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="products">
+      <h2>Fresh Rootee Menu</h2>
+      <!-- Update each product to be inside a box -->
+<div class="product-grid">
+  <div class="product-box">
+    <div class="product">
+      <img src="product1.JPG" alt="Product 1" />
+      <h3>Regular Rootee</h3>
+      <p>
+        โรตีสูตรดั่งเดิม
+      </p>
+      <p>Price: 10.00฿</p>
+    <button class="btn btn-primary" id="add2cart" onclick="addToCart('Product 1', 10.00)">
+      Add To Cart
+    </button>
+    </div>
+  </div>
+</div>
+
+<!-- Repeat the same structure for other products -->
+
+<div class="product-grid">
+  <div class="product-box">
+      <div class="product">
+        <img src="product2.jpg" alt="Product 2" />
+        <h3>Rootee Egg</h3>
+        <p>
+          โรตีใส่ไข่
+        </p>
+        <p>Price: 20.00฿</p>
+        <button class="btn btn-primary" id="add2cart" onclick="addToCart('Product 2', 20.00)">
+          Add To Cart
+        </button>
+      </div>
+  </div>
+</div>  
+
+<div class="product-grid">
+  <div class="product-box">
+      <div class="product">
+        <img src="product3.jpg" alt="Product 3" />
+        <h3>Rootee Baitoey</h3>
+        <p>
+          โรตีแป้งใบเตย พร้อมสังขยา
+        </p>
+        <p>Price: 15.00฿</p>
+        <button class="btn btn-primary" id="add2cart" onclick="addToCart('Product 3', 15.00)">
+          Add To Cart
+        </button>
+      </div>
+  </div>
+</div>
+
+<div class="product-grid">
+  <div class="product-box">
+      <div class="product">
+        <img src="product4.jpg" alt="Product 4" />
+        <h3>Rootee Chocolate</h3>
+        <p>
+          โรตีใส่ช็อกโกแลต
+        </p>
+        <p>Price: 15.00฿</p>
+        <button class="btn btn-primary" id="add2cart" onclick="addToCart('Product 4', 15.00)">
+          Add To Cart
+        </button>
+      </div>
+  </div>
+</div>
+
+<div class="product-grid">
+  <div class="product-box">
+      <div class="product">
+        <img src="product5.jpg" alt="Product 5" />
+        <h3>Rootee Foi Tong</h3>
+        <p>
+          โรตีฝอยทอง
+        </p>
+        <p>Price: 20.00฿</p>
+        <button class="btn btn-primary" id="add2cart" onclick="addToCart('Product 5', 20.00)">
+          Add To Cart
+        </button>
+      </div>
+  </div>
+</div>
+
+<div class="product-grid">
+  <div class="product-box">
+      <div class="product">
+        <img src="product6.jpg" alt="Product 6" />
+        <h3>Rootee Strawbarry</h3>
+        <p>
+          โรตีใส่แยมสตอเบอร์รี่
+        </p>
+        <p>Price: 15.00฿</p>
+        <button class="btn btn-primary" id="add2cart" onclick="addToCart('Product 6', 15.00)">
+          Add To Cart
+        </button>
+      </div>
+  </div>
+</div>
+
+<div class="product-grid">
+  <div class="product-box">
+      <div class="product">
+        <img src="product7.jpg" alt="Product 7" />
+        <h3>Rootee Banana</h3>
+        <p>
+          โรตีเนื้อกล้วยผสม
+        </p>
+        <p>Price: 20.00฿</p>
+        <button class="btn btn-primary" id="add2cart" onclick="addToCart('Product 7', 25.00)">
+          Add To Cart
+        </button>
+      </div>
+  </div>
+</div>
+
+<div class="product-grid">
+  <div class="product-box">
+      <div class="product">
+        <img src="product8.webp" alt="Product 8" />
+        <h3>Rootee Lava</h3>
+        <p>
+          โรตีลาวา ใส่นมข้นและเนยสอดไส้ข้างใน
+        </p>
+        <p>Price: 20.00฿</p>
+        <button class="btn btn-primary" id="add2cart" onclick="addToCart('Product 8', 20.00)">
+          Add To Cart
+        </button>
+      </div>
+  </div>
+</div>
+
+<div class="product-grid">
+  <div class="product-box">
+      <div class="product">
+        <img src="product9.jpg" alt="Product 9" />
+        <h3>Rootee Butterfly pea</h3>
+        <p>
+          โรตีแป้งอัญชัน
+        </p>
+        <p>Price: 25.00฿</p>
+        <button class="btn btn-primary" id="add2cart" onclick="addToCart('Product 9', 25.00)">
+          Add To Cart
+        </button>
+      </div>
+  </div>
+</div>
+
+<div class="product-grid">
+  <div class="product-box">      
+      <div class="product">
+        <img src="product10.jpg" alt="Product 10" />
+        <h3>Rootee Crunchy</h3>
+        <p>
+          โรตีกรอบพิเศษ
+        </p>
+        <p>Price: 20.00฿</p>
+        <button class="btn btn-primary" id="add2cart" onclick="addToCart('Product 10', 20.00)">
+          Add To Cart
+        </button>
+      </div>
+  </div>
+</div>
+
+    </section>
+
+    <section id="cart">
+      <h2>Shopping Cart</h2>
+      <ul id="cart-items">
+        <!-- Cart items will be displayed here -->
+      </ul>
+      <p>Total: ฿<span id="cart-total">0.00</span></p>
+      <!-- Add a "Buy" button -->
+      <button class="btn btn-primary" id="buyButton">Buy</button>
+
+
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Email: contact@Rootee.com</p>
+      <p>Phone: +123-456-7890</p>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Rootee ready to served.</p>
+    </footer>
+    <script src="Shopping Cart.js"></script>
+  
+  </body>
+</html>
