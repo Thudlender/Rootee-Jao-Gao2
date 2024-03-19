@@ -1,113 +1,122 @@
 /* styles.css */
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 header {
-    background-color: #f5f5f5;
-    padding: 20px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  background-color: #f5f5f5;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 header img {
-    max-width: 200px; /* Adjust the max-width to your desired size */
-    height: auto;
-    margin-bottom: 10px; /* Add some margin below the logo */
+  max-width: 200px; /* Adjust the max-width to your desired size */
+  height: auto;
+  margin-bottom: 10px; /* Add some margin below the logo */
 }
 
 header h1 {
-    margin: 0;
-    font-weight: 700; /* Make the header text bold */
+  margin: 0;
+  font-weight: 700; /* Make the header text bold */
 }
 
 nav ul {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 20px;
+  display: inline;
+  margin-right: 20px;
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: #333;
+  text-decoration: none;
+  color: #333;
 }
 
 section {
-    padding: 20px;
+  padding: 20px;
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
 }
 
 .product {
-    border-radius: 5px;
-    box-shadow: 0 2px 5px;
-    margin: 10px;
-    padding: 20px;
-    text-align: center;
-    width: 200px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px;
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 200px;
 }
 
 /* Add this to your CSS file */
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
-    gap: 20px; /* Adjust the gap between grid items */
+#products-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 23px;
+  height: fit-content;
 }
 
 .product-box {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
 }
 
 .product img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 .product h3 {
-    font-size: 20px;
-    margin-top: 10px;
+  font-size: 20px;
+  margin-top: 10px;
 }
 
 .product p {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .product button {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 #products {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 50px 20px; /* Adjust padding as needed */
-    margin-top: 100px;
+  display: flex;
+  /* flex-wrap: wrap; */
+  align-items: center;
+  padding: 50px 20px; /* Adjust padding as needed */
+  margin-top: 100px;
 }
 
-#products h2 {
-    text-align: center;
-    margin-top: 20px; /* Adjust margin-top to create space */
-    margin-bottom: 20px; /* Optional: Add margin-bottom for extra space */
-    margin-left: 20px;
-    margin-right: 20px;
-    position: fixed;
+.title-text h2 {
+  text-align: center;
+  margin-top: 20px; /* Adjust margin-top to create space */
+  margin-bottom: 20px; /* Optional: Add margin-bottom for extra space */
+  margin-left: 20px;
+  margin-right: 20px;
+  /* position: fixed; */
+}
+
+.product img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
 }
