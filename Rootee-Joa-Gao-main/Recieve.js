@@ -1,37 +1,24 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const buyButton = document.getElementById("buyButton");
+// Function to capture and print screenshot of the shopping cart
+function printScreenshot() {
+  // Capture the shopping cart section using html2canvas
+  html2canvas(document.querySelector("#cart")).then((canvas) => {
+    // Convert the canvas to an image data URL
+    var imgData = canvas.toDataURL("image/png");
+    // Create a new PDF document
+    var pdf = new jsPDF();
+    // Add the image to the PDF document
+    pdf.addImage(
+      imgData,
+      "PNG",
+      0,
+      0,
+      pdf.internal.pageSize.getWidth(),
+      pdf.internal.pageSize.getHeight()
+    );
+    // Save the PDF document
+    pdf.save("shopping_cart.pdf");
+  });
+}
 
-    buyButton.addEventListener("click", function() {
-        const cartItems = document.querySelectorAll("#cart-items li");
-        const totalPrice = document.getElementById("cart-total").textContent;
-
-        // Initialize jsPDF
-        const doc = new jsPDF();
-
-        // Set initial y-coordinate for the PDF content
-        let y = 10;
-
-        // Add title to the PDF
-        doc.setFontSize(20);
-        doc.text("Shopping Cart", 10, y);
-        y += 10;
-
-        // Add shopping cart items to the PDF
-        cartItems.forEach(item => {
-            const productName = item.querySelector(".product-name").textContent;
-            const productPrice = item.querySelector(".product-price").textContent;
-
-            doc.setFontSize(12);
-            doc.text(`${productName} - ${productPrice}`, 10, y);
-            y += 7;
-        });
-
-        // Add total price to the PDF
-        doc.setFontSize(14);
-        doc.text(`Total: ${totalPrice}`, 10, y + 10);
-
-        // Save the PDF
-        doc.save("shopping_cart.pdf");
-    });
-});
-//------------------ใช้ไม่ได้ :( ---------------------// 
+// Add event listener to the Buy button
+document.getElementById("buyButton").addEventListener("click", printScreenshot);

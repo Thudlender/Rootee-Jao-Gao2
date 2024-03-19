@@ -1,6 +1,5 @@
 /* styles.css */
 
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 body {
@@ -65,45 +64,50 @@ footer {
     width: 200px;
 }
 
-
 /* Add this to your CSS file */
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust minmax() values as needed */
+    grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
     gap: 20px; /* Adjust the gap between grid items */
-  }
+}
 
 .product-box {
     border: 1px solid #ccc;
     padding: 10px;
     margin-bottom: 20px;
-  }
-  
-  .product img {
+}
+
+.product img {
     max-width: 100%;
     height: auto;
-  }
-  
-  .product h3 {
+}
+
+.product h3 {
     font-size: 20px;
     margin-top: 10px;
-  }
-  
-  .product p {
+}
+
+.product p {
     margin-bottom: 10px;
-  }
-  
-  .product button {
-    margin-top: 10px;
-  }
+}
 
-  .products h2{
+.product button {
     margin-top: 10px;
-  }
+}
 
-  #products {
+#products {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    padding: 100px;
-  }
+    align-items: center;
+    padding: 50px 20px; /* Adjust padding as needed */
+    margin-top: 100px;
+}
+
+#products h2 {
+    text-align: center;
+    margin-top: 20px; /* Adjust margin-top to create space */
+    margin-bottom: 20px; /* Optional: Add margin-bottom for extra space */
+    margin-left: 20px;
+    margin-right: 20px;
+    position: fixed;
+}
